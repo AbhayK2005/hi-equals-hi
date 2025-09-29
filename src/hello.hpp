@@ -1,3 +1,4 @@
 #include <string>
+using namespace std;
 
-std::string hello();
+int str_cmp_case_insensitive(const string& str1, const string& str2);

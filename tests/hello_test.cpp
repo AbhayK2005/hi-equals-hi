@@ -5,6 +5,14 @@
 
 #include "../src/hello.hpp"
 
-TEST_CASE( "it returns Hello World" ) {
-    REQUIRE( hello() == "Hello World!" );
+TEST_CASE("Second string greater") {
+    REQUIRE(str_cmp_case_insensitive("String one", "string two") == -1);
+}
+
+TEST_CASE("Strings equal") {
+    REQUIRE(str_cmp_case_insensitive("String one", "string one") == 0);
+}
+
+TEST_CASE("First string greater") {
+    REQUIRE(str_cmp_case_insensitive("String two", "string one") == 1);
 }
